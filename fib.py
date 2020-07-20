@@ -25,12 +25,11 @@ def fib(n):
     for i in range(3, n + 1):
         count = pre1 + pre2
         seq.append(count)
-        pre1 = pre2
-        pre2 = count
+        pre1, pre2 = pre2, count
         i += 1
     return seq
 
 
 if __name__ == '__main__':
-    fib_seq = fib(-6)
+    fib_seq = fib(6)
     print(fib_seq)
